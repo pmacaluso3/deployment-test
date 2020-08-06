@@ -22,7 +22,7 @@ animalsController.show = (req, res, next) => {
     .catch(next);
 };
 
-animalsController.create = (req, res) => {
+animalsController.create = (req, res, next) => {
   new Animal({
     name: req.body.name,
     species: req.body.species,
