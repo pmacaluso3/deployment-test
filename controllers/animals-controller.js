@@ -2,7 +2,7 @@ const Animal = require('../models/Animal');
 
 const animalsController = {};
 
-animalsController.index = (req, res) => {
+animalsController.index = (req, res, next) => {
   Animal.getAll()
     .then((animals) => {
       res.render('animals/index', {
